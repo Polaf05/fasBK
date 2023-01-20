@@ -99,22 +99,22 @@ const DisplayDisposeAssets = (props: {
 								</div>
 
 								<Modal
-									className="max-w-lg"
+									className="max-w-sm"
 									isVisible={searchModal}
 									setIsVisible={setSearchModal}
-									title="NOTICE!!"
+									title="NOTICE!"
 								>
-									<div className="py-2">
+									<div className="pt-2 pb-3">
 										<p className="text-center text-lg font-semibold">No Data Found!</p>
 									</div>
 								</Modal>
 								<Modal
-									className="max-w-lg"
+									className="max-w-sm"
 									isVisible={validateModal}
 									setIsVisible={setValidateModal}
-									title="NOTICE!!"
+									title="NOTICE!"
 								>
-									<div className="py-2">
+									<div className="pt-2 pb-3">
 										<p className="text-center text-lg font-semibold">{validateString}</p>
 									</div>
 								</Modal>

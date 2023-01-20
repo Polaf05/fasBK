@@ -164,7 +164,7 @@ export const RepairDetailsModal = (props: {
                 </div>
             </form >
 
-            <Modal isVisible={isVisible} setIsVisible={setIsVisible} className="max-w-2xl" title="Transfer Complete" >
+            <Modal isVisible={isVisible} setIsVisible={setIsVisible} className="max-w-sm" title="Transfer Complete" >
                 <div className="px-4 py-2 flex flex-col w-full">
                     <div>
                         <p className="text-center text-lg font-semibold">Action is successful.</p>

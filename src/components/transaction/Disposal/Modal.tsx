@@ -229,12 +229,16 @@ export const DisposeDetailsModal = (props: {
                 </div>
             </form >
 
-            <Modal isVisible={isVisible} setIsVisible={setIsVisible} className="max-w-2xl" title="Transfer Complete" >
-                <div className="px-4 py-2 flex flex-col w-full">
+            <Modal
+                isVisible={isVisible}
+                setIsVisible={setIsVisible}
+                className="max-w-sm"
+                title="Transfer Complete" >
+                <div className="px-4 pt-1 pb-2 flex flex-col w-full">
                     <div>
                         <p className="text-center text-lg font-semibold">Action is successful.</p>
                     </div>
-                    <div className="flex justify-end py-2">
+                    <div className="flex justify-center pt-3">
                         <button className="rounded bg-tangerine-500 px-4 py-1 font-medium text-white duration-150 hover:bg-tangerine-400 disabled:bg-gray-300 disabled:text-gray-500"
                             onClick={() => {
                                 setIsVisible(false);

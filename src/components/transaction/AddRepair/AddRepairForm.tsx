@@ -98,10 +98,10 @@ const AddRepairForm = () => {
         noValidate
       >
         <Modal
-          className="max-w-lg"
+          className="max-w-sm"
           isVisible={validateModal}
           setIsVisible={setValidateModal}
-          title="NOTICE!!"
+          title="NOTICE!"
         >
           <div className="py-2">
             <p className="text-center text-lg font-semibold">{validateString}</p>
@@ -217,7 +217,7 @@ const AddRepairForm = () => {
       <Modal
         isVisible={completeModal}
         setIsVisible={setCompleteModal}
-        className="max-w-2xl"
+        className="max-w-sm"
         title="Transfer Complete"
       >
         <div className="flex w-full flex-col px-4 py-2">

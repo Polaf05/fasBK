@@ -39,10 +39,19 @@ const DisplayTransferAssets = (props: {
 
 	useEffect(
 		() => {
-			setTransferAsset(asset as AssetType);
-		},
-		[setTransferAsset, asset]
+			if (assetNumber !== "") {
+				if (asset === null || asset?.deleted === true) {
+					setSearchModal(true)
+					setAssetNumber("")
+				}
+				else {
+					setTransferAsset(asset as AssetType);
+				}
+			}
+		}, [setTransferAsset, asset, assetNumber]
 	);
+
+
 
 
 	return (
@@ -75,12 +84,12 @@ const DisplayTransferAssets = (props: {
 								</div>
 
 								<Modal
-									className="max-w-lg"
+									className="max-w-sm"
 									isVisible={searchModal}
 									setIsVisible={setSearchModal}
-									title="NOTICE!!"
+									title="NOTICE!"
 								>
-									<div className="py-2">
+									<div className="pt-2 pb-3">
 										<p className="text-center text-lg font-semibold">No Data Found!</p>
 									</div>
 								</Modal>

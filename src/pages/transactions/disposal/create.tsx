@@ -53,7 +53,7 @@ const DisposeNew = () => {
             if (disposeAsset === null || disposeAsset?.deleted === true) {
                 setDisposeAsset(null)
             } else if (disposeAsset?.status === "disposal") {
-                setValidateString("The asset is already in for disposal")
+                setValidateString("The asset is already in for disposal.")
                 setValidateModal(true)
                 setDisposeAsset(null)
             } else if (disposeAsset?.status === "repair") {
@@ -87,12 +87,12 @@ const DisposeNew = () => {
                     setLimit={setLimit}
                 />}
                 <Modal
-                    className="max-w-lg"
+                    className="max-w-sm"
                     isVisible={validateModal}
                     setIsVisible={setValidateModal}
-                    title="NOTICE!!"
+                    title="NOTICE!"
                 >
-                    <div className="py-2">
+                    <div className="pt-2 pb-4">
                         <p className="text-center text-lg font-semibold">{validateString}</p>
                     </div>
                 </Modal>

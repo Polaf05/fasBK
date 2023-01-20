@@ -101,10 +101,10 @@ const RepairNew = () =>
           setLimit={setLimit}
         />}
         <Modal
-          className="max-w-lg"
+          className="max-w-sm"
           isVisible={validateModal}
           setIsVisible={setValidateModal}
-          title="NOTICE!!"
+          title="NOTICE!"
         >
           <div className="py-2">
             <p className=" text-center text-lg font-semibold">{validateString}</p>

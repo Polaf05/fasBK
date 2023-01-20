@@ -968,16 +968,16 @@ const CreateDisposeAccordion = () => {
       <Modal
         isVisible={completeModal}
         setIsVisible={setCompleteModal}
-        className="max-w-2xl"
+        className="max-w-md"
         title="Asset Disposed"
       >
-        <div className="flex w-full flex-col px-4 py-2">
+        <div className="flex w-full flex-col px-3 pt-2 pb-4 ">
           <div>
             <p className="text-center text-lg font-semibold">
               Asset successfully added to disposal.
             </p>
           </div>
-          <div className="flex justify-end py-2">
+          <div className="flex justify-center pt-4 ">
             <Link href={"/assets"}>
               <button className="rounded bg-tangerine-500 px-4 py-1 font-medium text-white duration-150 hover:bg-tangerine-400 disabled:bg-gray-300 disabled:text-gray-500">
                 Return to assets tab
