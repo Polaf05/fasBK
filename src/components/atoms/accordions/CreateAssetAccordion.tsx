@@ -766,9 +766,108 @@ const CreateAssetAccordion = () => {
                       />
                     </div>
                   </div>
+                  <div className="col-span-12 flex w-full flex-wrap gap-7 ">
+                    <div className="w-[18.53%]">
+                      <ClassTypeSelect //TODO: change values appropriately
+                        query={classId}
+                        setQuery={setClassId}
+                        required
+                        name={"model.classId"}
+                        setValue={setValue}
+                        value={getValues("model.classId")?.toString()}
+                        title={"Category 1"}
+                        placeholder={"Select Category 1"}
+                        data={classList ?? []}
+                      />
+                      {/* <AlertInput>{errors?.model?.classId?.message}</AlertInput> */}
+                    </div>
+                    <div className="w-[18.53%]">
+                      <ClassTypeSelect //TODO: change values appropriately
+                        disabled={!Boolean(categoryId)}
+                        query={typeId}
+                        setQuery={setTypeId}
+                        required
+                        name={"model.typeId"}
+                        setValue={setValue}
+                        value={getValues("model.typeId")?.toString()}
+                        title={"Category 2"}
+                        placeholder={
+                          // !Boolean(categoryId)
+                          //   ? "Select asset category first"
+                          //   : "Select asset type"
+                          "Category 1 required"
+                        }
+                        data={types ?? []}
+                      />
+                      {/* <AlertInput>
+                        {errors?.model?.categoryId?.message}
+                      </AlertInput> */}
+                    </div>
+                    <div className="w-[18.53%]">
+                      <ClassTypeSelect //TODO: change values appropriately
+                        disabled={!Boolean(categoryId)}
+                        query={typeId}
+                        setQuery={setTypeId}
+                        required
+                        name={"model.typeId"}
+                        setValue={setValue}
+                        value={getValues("model.typeId")?.toString()}
+                        title={"Category 3"}
+                        placeholder={
+                          // !Boolean(categoryId)
+                          //   ? "Select asset category first"
+                          //   : "Select asset type"
+                          "Category 2 required"
+                        }
+                        data={types ?? []}
+                      />
+                      {/* <AlertInput>{errors?.model?.typeId?.message}</AlertInput> */}
+                    </div>
+                    <div className="w-[18.53%]">
+                      <ClassTypeSelect //TODO: change values appropriately
+                        disabled={!Boolean(categoryId)}
+                        query={typeId}
+                        setQuery={setTypeId}
+                        required
+                        name={"model.typeId"}
+                        setValue={setValue}
+                        value={getValues("model.typeId")?.toString()}
+                        title={"Category 4"}
+                        placeholder={
+                          // !Boolean(categoryId)
+                          //   ? "Select asset category first"
+                          //   : "Select asset type"
+                          "Category 3 required"
+                        }
+                        data={types ?? []}
+                      />
+                      {/* <AlertInput>{errors?.model?.typeId?.message}</AlertInput> */}
+                    </div>
+                    <div className="w-[18.53%] gap-2">
+                      <ClassTypeSelect //TODO: change values appropriately
+                        disabled={!Boolean(categoryId)}
+                        query={typeId}
+                        setQuery={setTypeId}
+                        required
+                        name={"model.typeId"}
+                        setValue={setValue}
+                        value={getValues("model.typeId")?.toString()}
+                        title={"Category 5"}
+                        placeholder={
+                          // !Boolean(categoryId)
+                          //   ? "Select asset category first"
+                          //   : "Select asset type"
+                          "Category 4 required"
+                        }
+                        data={types ?? []}
+                      />
+
+                      {/* <AlertInput>{errors?.model?.typeId?.message}</AlertInput> */}
+                    </div>
+                  </div>
                 </div>
-                <div className="col-span-9 grid grid-cols-9 gap-7">
-                  <div className="col-span-3">
+                <div className="col-span-9 grid grid-cols-12 gap-7">
+                  <div className="col-span-6">
                     <TypeSelect
                       isString
                       name={"management.currency"}
@@ -786,7 +885,7 @@ const CreateAssetAccordion = () => {
                     </AlertInput>
                   </div>
 
-                  <div className="col-span-3">
+                  <div className="col-span-6">
                     <TypeSelect
                       isString
                       name={"management.accounting_method"}
@@ -804,7 +903,9 @@ const CreateAssetAccordion = () => {
                       {errors?.management?.accounting_method?.message}
                     </AlertInput>
                   </div>
+                </div>
 
+                <div className="col-span-9 grid grid-cols-12 gap-7">
                   <div className="col-span-3 space-y-2">
                     <p className="text-sm text-gray-700">Purchase Date</p>
                     <DatePicker
@@ -820,7 +921,39 @@ const CreateAssetAccordion = () => {
                       }} // className="peer peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-3 text-sm text-gray-900 focus:border-tangerine-500 focus:outline-none focus:ring-0"
                     />
                   </div>
+                  <div className="col-span-3 space-y-2">
+                    <InputField
+                      register={register}
+                      label="Purchase Order Number"
+                      placeholder="Purchase Order Number"
+                      name="po_number"
+                    />
+                  </div>
+                  <div className="col-span-3 space-y-2">
+                    <InputField
+                      register={register}
+                      label="Invoice Number"
+                      placeholder="Invoice Number"
+                      name="invoice_number"
+                    />
+                  </div>
+                  <div className="col-span-3 space-y-2">
+                    <p className="text-sm text-gray-700">Delivery Date</p>
+                    <DatePicker
+                      placeholder="Month Day, Year"
+                      allowFreeInput
+                      size="sm"
+                      onChange={(value) => {
+                        // setValue("management.purchase_date", value)
+                      }}
+                      classNames={{
+                        input:
+                          "border-2 border-gray-400 h-11 rounded-md px-2 outline-none focus:outline-none focus:border-tangerine-400",
+                      }} // className="peer peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-3 text-sm text-gray-900 focus:border-tangerine-500 focus:outline-none focus:ring-0"
+                    />
+                  </div>
                 </div>
+
                 <div className="col-span-9 grid grid-cols-6 gap-7">
                   <div className="col-span-2">
                     <TypeSelect

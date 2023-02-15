@@ -413,7 +413,6 @@ const Vendors = () => {
               </div>
               <hr className="w-full"></hr>
               <div className="flex w-full justify-end gap-2 mt-4">
-                {/* TODO: Reset form */}
                 <button
 
 
